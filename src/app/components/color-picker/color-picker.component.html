@@ -1,0 +1,38 @@
+
+<mat-card>
+    <div class="col-4" style="text-align : center">
+        
+          <mat-form-field>
+            <mat-select placeholder="Handwritings" [(ngModel)]="selectedHandWrite">
+              <mat-option *ngFor="let hw of handwritings" [value]="hw.viewValue">{{ hw.value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+          <label for="color">Choose your color : </label>
+        
+          <p-colorPicker [(ngModel)]="color"></p-colorPicker> <b>{{color}}</b>
+        
+        </div>
+        
+        <div class="seemore">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Advanced settings
+              </mat-panel-title>
+              <mat-panel-description>
+                see..
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+        
+            <app-advanced-settings [handWriting_id]="selectedHandWrite" (outgoingData)='handleEvent($event)' [color]="color"></app-advanced-settings>
+          </mat-expansion-panel>
+        
+        
+        </div>
+        <div class="seemore">
+          <app-writing [dhw]="dhw"></app-writing>
+        </div>
+        
+  </mat-card>
+

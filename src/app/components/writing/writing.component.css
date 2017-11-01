@@ -1,0 +1,27 @@
+.padding {
+    padding-top: 20px;
+}
+#outer
+{
+    padding-left: 165px;
+    text-align: right;
+}
+.inner
+{
+    display: inline-block;
+}
+embed {
+    height: 260px;
+    width: 500px;
+    z-index: 1;
+}
+#document {
+    padding-top: 20px;
+}
+mat-spinner {
+    margin-left: -130px;
+}
+button {
+    background-color: #57B8CD    ;
+    color: white;
+}

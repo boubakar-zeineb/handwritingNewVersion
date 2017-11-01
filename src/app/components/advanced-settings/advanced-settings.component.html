@@ -1,0 +1,67 @@
+<p-selectButton [options]="typeOutput" (click)="sendData()" [(ngModel)]="selectedTypeOutput"></p-selectButton>
+<label for="type">Output as {{selectedTypeOutput | uppercase}}</label>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="size" (ngModelChange)="sendData()" matInput placeholder="Size">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="width" (ngModelChange)="sendData()" matInput placeholder="Width">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="randomSeed" (ngModelChange)="sendData()" matInput placeholder="Random seed">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="lineSpacingVar" (ngModelChange)="sendData()" matInput placeholder="Line spacing var">
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="color" (ngModelChange)="sendData()" matInput placeholder="Color">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="height" (ngModelChange)="sendData()" matInput placeholder="Height">
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="lineSpacing" (ngModelChange)="sendData()" matInput placeholder="Line spacing">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-3">
+        <div class="ui-inputgroup">
+            <mat-form-field>
+                <input type="text" [(ngModel)]="wordSpacing" (ngModelChange)="sendData()" matInput placeholder="WordSpacing">
+            </mat-form-field>
+        </div>
+    </div>
+</div>

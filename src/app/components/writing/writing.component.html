@@ -1,0 +1,23 @@
+<p-growl [(value)]="msgs"></p-growl>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <div class="padding">
+      <mat-form-field>
+        <mat-select placeholder="Choose a present" [(ngModel)]="text">
+          <mat-option *ngFor="let txt of texts" [value]="txt.viewValue">{{ txt.value }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <textarea #txt class="padding" rows="10" cols="50" [(ngModel)]="text" pInputTextarea></textarea>
+    </div>
+  </div>
+  <div class="ui-g-12 ui-md-2"></div>
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  <div class="ui-g-12 ui-md-6" id="document">
+    <img [src]='sanitizer.bypassSecurityTrustResourceUrl(imageUrl)' *ngIf="showImg">
+    <embed #embed *ngIf="showPdf" [src]='sanitizer.bypassSecurityTrustResourceUrl(pdfUrl)' />
+  </div>
+  <div id="outer">
+    <div class="inner"><button (click)="txt.value = ''" mat-raised-button >Clear</button> </div>
+    <div class="inner"><button (click)="callApi()" mat-raised-button >Create {{type}}</button></div>
+  </div>
+</div>
